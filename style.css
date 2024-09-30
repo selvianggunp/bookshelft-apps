@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'chewy';
+    src: url(font/Chewy-Regular.ttf);
+
+    font-family: 'poppin';
+    src: url(font/Poppins-Regular.ttf);
+}
+
+:root{
+--color-bg: #9275e9;
+}
+
+
+header .viewTitle h2{
+    font-family: 'chewy';
+    color: white;
+    font-size: 40px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(242, 242, 242);
+    font-family: 'poppin';
+}
+
+header{
+    background: var(--color-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+header .search_section {
+    width: 30%;
+}
+
+header > .search_section > h4{
+     color: white;
+}
+
+header .search_section form{
+    display: flex;
+    gap: 0.4rem;
+}
+
+header .search_section form input{
+    padding: 12px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 15px;
+    font-family: 'poppin';
+}
+
+header .search_section button{
+    padding: 12px;
+    border: none;
+    background: white;
+    border-radius: 15px;
+    width: 30%;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'poppin';
+    color: var(--color-bg);
+}
+
+main{
+    display: flex;
+    margin: 1rem;
+    gap: 1.5rem;
+}
+
+main .input_books{
+    margin-left: 15px;
+}
+
+main .book_shelf{
+    margin-right: 15px;
+}
+
+main .input_books, main .book_shelf{
+    background: #f8f8f8;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow:  0px 0px 3px 1px rgb(224, 222, 222);
+}
+main .input_books h3{
+    margin-top: 30px;
+}
+main .input_books h3, main .input_edit_cart h3{
+    text-align: center;
+     color: var(--color-bg)
+}
+main .input_edit_cart h3{
+    color: white;
+}
+main .input_books, main .book_shelf, main .input_edit_cart{
+    padding: 2.5rem 1.5rem;
+}
+
+main .input_books form, main .input_edit_cart form {
+    padding: 2rem;
+}
+
+main .input_books form .input, main .input_edit_cart form .inputEdit{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+}
+
+main .input_books form .input_inline,
+main .input_books form .bookSubmit,
+main .input_books form .buttonCancel
+main .input_edit_cart form .input_inline_Edit
+{
+    margin-top: 1rem;
+}
+
+main .input_edit_cart form .input_inline_Edit
+{
+    margin-bottom: 1rem;
+}
+
+main .input_books form label{
+    color: gray;
+
+}
+
+main .input_books form #inputBookIsComplete{
+    color: black;
+}
+
+main .input_books form #inputBookTitle,
+main .input_books form #inputBookAuthor,
+main .input_books form #inputBookYear,
+main .input_edit_cart form #inputBookTitleEdit,
+main .input_edit_cart form #inputBookAuthorEdit,
+main .input_edit_cart form #inputBookYearEdit
+{
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    padding: 0.2rem;
+    border-bottom: 1px solid rgb(207, 203, 203);
+    font-size: 17px;
+}
+
+main .input_books form button.bookSubmit,
+main .input_edit_books form button.bookSubmitEdit
+{
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: var(--color-bg);
+    cursor: pointer;
+    color: white;
+    font-family: 'poppin';
+    font-weight: bold;
+}
+
+main .input_edit_books form button.bookSubmitEdit{
+    color: var(--color-bg);
+}
+main .input_edit_cart form .btnSubmitEdit{
+    display: flex;    
+}
+
+main .input_edit_cart form button.bookSubmitEdit,
+main .input_edit_cart form button.bookSubmitCancel{
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: white;
+    cursor: pointer;
+ }
+
+main .input_edit_books #inputBookIsComplete{
+    color: white;
+}
+
+main .book_shelf{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .book_shelf .unfinish_read .book_item,
+main .book_shelf .finish_read .book_item{
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main .book_shelf .finish_read,
+main .book_shelf .unfinish_read{
+    overflow-y: auto;
+    height: 200px;
+} 
+
+main div.cover{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.7;    
+}
+
+main section.input_edit_books{
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid salmon; */
+    justify-content: center;
+    align-items: center;
+}
+
+main .input_edit_cart{
+    position: absolute;
+    background: var(--color-bg);
+    height: 32rem;
+    width: 30rem;
+    border-radius: 15px;
+}
+
+main .input_edit_books .xmark img{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.input_books label, .input_edit_books label{
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.book_shelf h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--color-bg);
+}
+
+footer{
+    height: 50px;
+    width: 100%;
+    background: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     color: white;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+
+.book_shelf button.green{
+   padding: 0 8px;
+   height: 25px;
+   align-items: center;
+   justify-content: center;
+   border: none;
+   font-weight: bold;
+   border-radius: 5px;
+   color: white;
+   margin-right: 3px;
+   cursor: pointer;
+   background-color: var(--color-bg);
+}
+
+.book_shelf .icon-text img{
+    width: 53px;
+}
+
+.book_shelf .action{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+}
+
+.book_shelf .action img:nth-child(1){
+    width: 22px;
+}
+
+.book_shelf .action img{
+    width: 18px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.book_shelf article{
+    display: flex;
+    justify-content:space-between;
+}
+
+.book_shelf .icon-text{
+    display: flex;
+    gap: 12px;
+}
+
+.book_shelf .list-books h3{
+    font-size: 18px;
+}
+
+.book_shelf .text p:nth-child(3){
+    font-size: 15px;
+    color: gray;
+}
+

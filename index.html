@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>bookshelf</title>
+</head> 
+<body>
+<header>
+    <div class="viewTitle">
+        <h2>Bookshelf Apps</h2>
+    </div>
+    <div class="search_section">
+        <form id="searchBook">
+        <input id="searchBookTitle" type="text" placeholder="ketik judul buku...">
+        <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+    </div>
+</header>
+<main>
+    <section class="input_books">
+        <h3 id="input_bookshelf">Masukan Buku Baru</h3>
+        <form id="inputBook">
+                <input  id="idBook" type="text" hidden>
+           <div class="input">
+                <label for="inputBookTitle">Judul</label>
+                <input id="inputBookTitle" type="text" value="" required>
+            </div>
+            <div class="input">
+                <label for="inputBookAuthor">Penulis</label>
+                <input id="inputBookAuthor" type="text"  value="" required>
+            </div>
+            <div class="input">
+                <label for="inputBookYear">Tahun</label>
+                <input id="inputBookYear" type="number" value="" required>
+            </div>
+            <div class="input_inline">
+                <label for="inputBookIsComplete" id="inputBookIsComplete">Selesai dibaca</label>
+                <input id="checkedIscompleted" type="checkbox" >
+            </div>
+            <div id="buttonForm">
+                <button class="bookSubmit" type="submit">Simpan</button>
+            </div>
+         </form>
+    </section>
+    <div class="cover" hidden> </div> 
+    <section class="input_edit_books">
+          <div class="input_edit_cart" hidden>
+            <h3 id="input_edit_bookshelf">Edit Buku</h3>
+            <form id="inputBook_edit" >
+               <input  id="idBook_edit" type="text" hidden>
+               <div class="inputEdit">
+                    <label for="inputBookTitleEdit">Judul</label>
+                    <input id="inputBookTitleEdit" type="text" value="" required>
+                </div>
+                <div class="inputEdit">
+                    <label for="inputBookAuthorEdit">Penulis</label>
+                    <input id="inputBookAuthorEdit" type="text"  value="" required>
+                </div>
+                <div class="inputEdit">
+                    <label for="inputBookYearEdit">Tahun</label>
+                    <input id="inputBookYearEdit" type="number" value="" required>
+                </div>
+                <div class="input_inline_Edit">
+                    <label for="inputBookIsCompleteEdit" id="inputBookIsComplete">Selesai dibaca</label>
+                    <input id="inputBookIsCompleteEdit" type="checkbox" >
+                </div>
+                <div class="btnSubmitEdit">
+                    <button class="bookSubmitEdit" type="submit">Simpan</button>
+                </div>
+         </form>
+         <div class="xmark"><img src="assets/circle-xmark-solid.svg" alt=""></div>
+        </div>
+    </section>
+    
+    <section class="book_shelf">
+        <div class="list-books">
+            <h2>Belum selesai dibaca</h2>        
+            <div class="unfinish_read">
+                <div id="incompleteBookshelfList" class="book_list">
+           
+                </div>
+          </div>
+        </div>
+    <div class="list-books">   
+        <div class="list-books">
+        <h2>Selesai dibaca</h2>        
+        <div class="finish_read">
+            <div id="completeBookshelfList" class="book_list">
+          
+            </div>
+        </div>
+    </div>
+   </div>
+    </section>
+</main>
+<footer>
+    Bookshelf Apps | by Selvia Anggun Pratiwi | 2024</footer>
+<script src="script.js"></script>
+</body>
+</html>
